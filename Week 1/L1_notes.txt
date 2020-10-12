@@ -1,0 +1,64 @@
+NOTES WEEK1
+
+MIPS- 
+32, 32 bit int registers
+32, 32 bit float registers
+Registers represented as- $0 ..... $31
+
+$0 - $zero
+$1 - $AT (Assembler Temp)
+
+saved reg ($16 to $23) -> $s0, $s1,.,$s7
+value reg ($2 and $3) also represented by-> $v0 and $v1
+argument reg ($4 to $7) -> $a0, $a1,$a2,$a3
+temporary reg ($8 to $15) -> $t0,...,$t7
+
+QTSPIM simulator MALP
+
+Structure-
+.data
+# comments
+.text #text section (data sections ends when u declare a new section)
+
+main: #label
+# write the program
+    li $v0,10 #li stands for load immidiate
+    syscall #these two lines of code are used to exit and transfer the control back to OS
+
+DataTypes:
+int, floatpoint, characters
+Integers:
+byte -> 8 bits
+halfword -> 16 bits
+word -> 32 bits
+Float:
+float -> 32 bits
+double -> 32 bits
+ascii -> ASCII Strings
+asciiz -> ASCII + null terminated
+
+Initializing a variable
+<variableName> .space <n> # n is the no.of bytes
+str1 .space 10
+
+Declaring variables:
+<variableName>: .<dataType> <initial value>
+data1: .word 5
+str1: .asciiz "Computer Architecture\n"
+
+System calls used for getting services from the operating system.
+Services are like functions.
+Each service has a system call code and takes in arguments. (Refer slides)
+
+print_string has a call code of 4 and taks in a0 as the argument
+.data
+str: .asciiz "answer is:"
+.text
+addi $v0,$zero,4
+la $a0,str # la -> load the address
+syscall
+
+Reading Srings:
+call code = 8
+$a0 = buffer (address of string)
+$a1 = length

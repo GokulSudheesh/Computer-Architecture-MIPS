@@ -1,0 +1,32 @@
+Refer mfhi, mflo from slides Week 2.
+
+shift left : sll $1, $2, count ($2 shifted left by (count) times)
+shift right: srl $1, $2, count ($2 shifted right by (count) times)
+
+Example (sll):
+      b4   b3	b2    b1    b0
+$t0 = 0    0    0     0    1  (original number)
+
+Shifting it left once:
+      b4   b3	b2    b1    b0
+$t0 = 0    0    0     1     0   (original number * 2^1)
+
+Shifting it left again:
+      b4   b3	b2    b1    b0
+$t0 = 0    0    0     1     0   (original number * 2^2)
+
+original number * 2^(no.of times you shift)
+
+Example (rll):
+      b4   b3	b2    b1    b0
+$t0 = 1    0    0     0     0  (original number) (Decimal = 16)
+
+Shifting it left once:
+      b4   b3	b2    b1    b0
+$t0 = 0    1    0     0     0   (original number / 2^1) (Decimal = 8)
+
+Shifting it left again:
+      b4   b3	b2    b1    b0
+$t0 = 0    0    1     0     0   (original number / 2^2) (Decimal = 4)
+
+original number / 2^(no.of times you shift)

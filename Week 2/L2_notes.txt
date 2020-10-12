@@ -1,0 +1,15 @@
+Control Transfer: Conditional and Unconditional 
+Conditional: if 
+Unconditional: no conditions checked
+
+These instructions use a label which will 
+mark the position to which the control has to be transferred.
+
+beq $1, $2 #Label (branch equal)
+bne $1, $2 #(branch not equal)
+bgt $1, $2 #(branch greater than) $1>$2
+blt (branch less than)
+bge (branch greater than or equal to)
+ble (branch less than or equal to)
+
+j label (Jump instruction)
