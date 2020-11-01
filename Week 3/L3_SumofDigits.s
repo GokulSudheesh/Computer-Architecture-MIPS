@@ -29,8 +29,6 @@ main:
 	move $t1, $v0
 	li $t0, 10
 	li $a0, 0
-	div $t1, $t0
-	mflo $t2
 	j loop
 end:
 	#Print sum value of digits which is at $a0
