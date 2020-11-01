@@ -1,4 +1,4 @@
-#Write a MIPS Program to compute the factorial of a whole number N.
+#Fibonacci Series (Optional)
 .data
 msg1: .asciiz "Enter N: "
 space: .asciiz " "
