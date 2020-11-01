@@ -1,4 +1,4 @@
-# Write a MIPS program to read and print a integer.
+# Write a MIPS program to read and print an integer.
 .data
 
 .text
