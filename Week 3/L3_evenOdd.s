@@ -6,7 +6,7 @@ msg3: .asciiz "It is odd!"
 .text
 
 isEven:
-	#Print msg3
+	#Print msg2
 	li $v0, 4 # syscall 4 (print_str)
     la $a0, msg2 # argument: string
 	syscall 	
