@@ -1,6 +1,6 @@
 # Write a MIPS program to print Hello World.
 .data
-msg: .asciiz "Hello Word"
+msg: .asciiz "Hello World"
 .text
 
 main: li $v0, 4 # syscall 4 (print_str)
