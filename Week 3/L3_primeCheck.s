@@ -33,11 +33,6 @@ main:
 	li $t1, 2
 	div $t0, $t1 # Dividing number by 2
 	mflo $t2 # Actual number/2
-	##delete this
-	move $a0, $t2
-	li $v0, 1 # syscall 1 (print_int)
-    syscall # print the integer stored in a0
-	#######################
 	li $t3, 2
 	j loop
 
