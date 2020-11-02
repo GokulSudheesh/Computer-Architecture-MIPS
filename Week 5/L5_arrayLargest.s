@@ -13,7 +13,7 @@ main:
 
 loop:
 	bge $t1, $t0, exit
-	sll $t2, $t1, 2
+	sll $t2, $t1, 2 #i*4
 	lw $t3, array($t2)
 	bgt $t3, $t4, setMax
     
