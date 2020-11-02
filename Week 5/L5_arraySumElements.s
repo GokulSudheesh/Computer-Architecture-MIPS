@@ -7,18 +7,17 @@ msg1: .asciiz "Sum of elements: "
 
 main:
 	li $t1, 0 #i=0
-	li $t2, 0 #i*4
+	li $t2, 0 #Array Counter
 	li $t4, 0 #sum
 	lw $t0, length
 
 loop:
 	bge $t1, $t0, exit
-	sll $t2, $t1, 2
+	sll $t2, $t1, 2 #i*4
 	lw $t3, array($t2)
 	add $t4, $t4, $t3
 
 	addi $t1, $t1, 1
-	addi $t2, $t2, 4
 	j loop
 exit:
 	li $v0, 4 # syscall 4 (print_str)
