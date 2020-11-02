@@ -11,7 +11,7 @@ main:
 	la $s0, list1
 	la $s1, list2
 	la $s2, list3
-	li $t0, 10 #length
+	lw $t0, length
 	li $t1, 0#i
 
 loop1:
