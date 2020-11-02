@@ -7,7 +7,7 @@ msg1: .asciiz "Largest element: "
 
 main:
 	li $t1, 0 #i=0
-	li $t2, 0 #i*4
+	li $t2, 0 #Array Counter
 	lw $t0, length
 	lw $t4, array($t1) #minimum val
 
@@ -18,13 +18,11 @@ loop:
 	bgt $t3, $t4, setMax
     
 	addi $t1, $t1, 1
-	addi $t2, $t2, 4
 	j loop
 
 setMax:
 	move $t4, $t3
 	addi $t1, $t1, 1
-	addi $t2, $t2, 4
 	j loop
 
 exit:
