@@ -9,7 +9,7 @@ main:
 	li $t1, 0 #i=0
 	li $t2, 0 #Array Counter
 	lw $t0, length
-	lw $t4, array($t1) #minimum val
+	lw $t4, array($t1) #maximum val
 
 loop:
 	bge $t1, $t0, exit
