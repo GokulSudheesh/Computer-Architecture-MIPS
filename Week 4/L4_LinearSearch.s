@@ -11,7 +11,7 @@ space: .asciiz " "
 
 main:  
 	la $s0, list
-	li $t0, 10 #length
+	lw $t0, length
 	li $t1, 0#i
 
 	#Print msg1
