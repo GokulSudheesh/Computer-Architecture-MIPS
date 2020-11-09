@@ -1,0 +1,39 @@
+# read_int syscall:5
+li $v0, 5 # syscall 5 (read_int) 
+syscall # stores in $v0
+---------------------------------------------------
+# print_int syscall:1
+li $v0, 1 # syscall 1 (print_int) int in $a0
+syscall
+---------------------------------------------------
+# read_string syscall:8
+li $v0, 8	# syscall 8 (read_str)
+la $a0, str1	# load address of string in $a0
+li $a1, 20	# load number of bytes (length) in $a1
+syscall		# string is loaded in memory @ str1
+---------------------------------------------------
+# print_str syscall:4
+li $v0, 4 # syscall 4 (print_str) address in $a0
+la $a0, str1
+syscall
+---------------------------------------------------
+# read_float syscall:6
+li $v0, 6 # syscall 6 (read_float)
+syscall # stores in $f0
+---------------------------------------------------
+# print_float syscall:2
+li $v0, 2 # syscall 2 (print_float) float in $f12
+syscall 
+---------------------------------------------------
+# read_double syscall:7
+li $v0, 7 # syscall 7 (read_double)
+syscall # stores in $f0
+---------------------------------------------------
+# print_double syscall:3
+li $v0, 3 # syscall 3 (print_double) double in $f12
+syscall 
+---------------------------------------------------
+# exit syscall:10
+li $v0, 10      
+syscall   
+---------------------------------------------------
