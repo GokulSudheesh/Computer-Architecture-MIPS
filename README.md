@@ -85,4 +85,8 @@ The most common operations are unified in **pseudo-instructions** — they can b
 
 In fact, every MIPS instruction that has `$zero` as its destination and doesn't touch memory, access I/O system, and/or call a trap, can be treated as a `nop`; but using `sll $zero, $zero, 0` is the most convenient because it's byte code is all-zeroes `0x00000000`.
 
+
+### PLayLists ###
+1. <a>https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A</a>
+2. <a>https://youtu.be/dQw4w9WgXcQ</a>
 ---
