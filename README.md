@@ -60,7 +60,3 @@ The most common operations are unified in **pseudo-instructions** — they can b
 In fact, every MIPS instruction that has `$zero` as its destination and doesn't touch memory, access I/O system, and/or call a trap, can be treated as a `nop`; but using `sll $zero, $zero, 0` is the most convenient because it's byte code is all-zeroes `0x00000000`.
 
 ---
-
-### Should we implement pseudo-instructions ###
-
-Since 2014/2015, all instructions are printed as real MIPS instructions in MIPT-MIPS. Unexpanded pseudo-instructions are left only in testing traces source files (`.s` files).
