@@ -1,0 +1,37 @@
+12/11/2020
+Write MALP for the following using procedures
+
+1. Recursive binary search
+int bin_search(int A[], int data, int lo, int hi)
+{
+  int mid;
+  if (lo > hi) return -1
+  mid = (lo + high)/2;
+  if ( data == A[mid]) return mid
+  if ( data < A[mid]) return bin_search(A, data, lo, mid-1)
+  return bin_search(A, data, mid, high+1)
+}
+
+2. Power of a given umber using recursion
+int power (int a, int n)
+{ 
+    if (n == 1) 
+	return a;
+    return a * power(n - 1);
+}
+main() 
+{  
+  pow = power(a, n);
+}
+
+3. Sum of N natural numbers using recursion 
+int RSum(int n) 
+{ 
+    if (n == 1) 
+        return n; 
+    return n + RSum(n - 1); 
+}
+main() 
+{  
+  sum = RSum(n);
+}
