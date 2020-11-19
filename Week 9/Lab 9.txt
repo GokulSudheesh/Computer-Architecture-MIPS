@@ -1,0 +1,8 @@
+19/11/2020
+Write MALP for the following using Floating point arithmetic instructions
+
+1. Find the Area of a Circle (pi= 3.1415926535897924). Get the radius value from the user. Assume it to be a single precision floating point value.
+
+2. Covert from°F to °C (°C= ((5.0/9.0)*(fahrenheit  - 32.0)). Get the fahrenheit from the user. Assume it to be a double precision floating point value. 
+ 
+3. Find the output of polynomial ax^2 + bx + c for user-input x. Assume x to be a single precision floating point value.
