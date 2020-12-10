@@ -5,7 +5,7 @@ Input: a1 = 4.3, b1 = 8.2
 Output: Sum = 9.9 + i15.3
 Explanation:
 (4.3 + i8.2) + (5.6 + i7.1)
-= (4.3 + i8.2) + i(5.6 + i7.1) 
+= (4.3 + 5.6) + i(8.2 + 7.1) 
 = 9.9 + i15.3
 
 2. Compute the average of a list of 5 integer numbers stored in memory and 
