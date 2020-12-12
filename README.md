@@ -141,6 +141,18 @@ li.s fd, value
 | cvt.w.s fd, fs     |`to integer form single`|
 | cvt.w.d fd, fs     |`to integer form double`|
 
+### FP Compare and Branch Instructions ###
+| **Instruction** | **Meaning** |
+|:---------|:--------------------|
+| c.eq.s fs, ft     |`cflag = ((fs) == (ft))`|
+| c.eq.d fs, ft     |`cflag = ((fs) == (ft))`|
+| c.lt.s fs, ft     |`cflag = ((fs) < (ft))`|
+| c.lt.d fs, ft     |`cflag = ((fs) < (ft))`|
+| c.le.s fs, ft     |`cflag = ((fs) <= (ft))`|
+| c.le.d fs, ft     |`cflag = ((fs) <= (ft))`|
+| bc1f label     |`branch if (cflag == 0)`|
+| bc1t label     |`branch if (cflag == 1)`|
+
 ### PLayLists ###
 1. <a>https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A</a>
 2. <a>https://youtu.be/dQw4w9WgXcQ</a>
