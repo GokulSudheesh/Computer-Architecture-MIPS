@@ -112,13 +112,34 @@ FP Arithmetic Instructions
 | swc1 $f2, 40($t0)      | `Mem[($t0+40)] = (f2)`|
 | sdc1 $f2, 40($t0)      | `Mem[($t0+40)] = (f2)`|
 
-FP Load/Store pseudo instructions
+### FP Load/Store pseudo instructions ###
 | **Instruction** | **Meaning** |
 |:---------|:--------------------|
 | l.s      | `lwc1 (load FP single)`|
 | s.s      | `swc1 (store FP single)`|
 | l.d      | `ldc1 (load FP double)`|
 | s.d      | `sdc1 (store FP double)`|
+
+Loading immediate value:
+li.s fd, value
+
+### FP Data Movement Instructions ###
+| **Instruction** | **Meaning** |
+|:---------|:--------------------|
+| mfc1 $t0, $f2      |`($t0) = ($f2)`|
+| mtc1 $t0, $f2      |`($f2) = ($t0)`|
+| mov.s $f4, $f2      |`($f4) = ($f2)`|
+| mov.d $f4, $f2      |`($f4) = ($f2)`|
+
+### FP Convert Instructions ###
+| **Instruction** | **Meaning** |
+|:---------|:--------------------|
+| cvt.s.w fd, fs     |`to single form integer`|
+| cvt.s.d fd, fs     |`to single form double`|
+| cvt.d.w fd, fs     |`to double form integer`|
+| cvt.d.s fd, fs     |`to double form single`|
+| cvt.w.s fd, fs     |`to integer form single`|
+| cvt.w.d fd, fs     |`to integer form double`|
 
 ### PLayLists ###
 1. <a>https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A</a>
