@@ -112,7 +112,7 @@ FP Arithmetic Instructions
 | swc1 $f2, 40($t0)      | `Mem[($t0+40)] = (f2)`|
 | sdc1 $f2, 40($t0)      | `Mem[($t0+40)] = (f2)`|
 
-| **FP Load/Store pseudo instructions** |
+FP Load/Store pseudo instructions
 |:---------|:--------------------|
 | l.s      | `lwc1 (load FP single)`|
 | s.s      | `swc1 (store FP single)`|
