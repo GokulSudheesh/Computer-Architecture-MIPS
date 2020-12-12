@@ -85,6 +85,39 @@ The most common operations are unified in **pseudo-instructions** — they can b
 
 In fact, every MIPS instruction that has `$zero` as its destination and doesn't touch memory, access I/O system, and/or call a trap, can be treated as a `nop`; but using `sll $zero, $zero, 0` is the most convenient because it's byte code is all-zeroes `0x00000000`.
 
+### Floating Point Instructions ###
+FP Arithmetic Instructions
+| **Instruction** | **Meaning** |
+|:---------|:--------------------|
+| add.s fd, fs, ft      | `(fd) = (fs) + (ft)`|
+| add.d fd, fs, ft      | `(fd) = (fs) + (ft)`|
+| sub.s fd, fs, ft      | `(fd) = (fs) - (ft)`|
+| sub.d fd, fs, ft      | `(fd) = (fs) - (ft)`|
+| mul.s fd, fs, ft      | `(fd) = (fs) * (ft)`|
+| mul.d fd, fs, ft      | `(fd) = (fs) * (ft)`|
+| div.s fd, fs, ft      | `(fd) = (fs) / (ft)`|
+| div.d fd, fs, ft      | `(fd) = (fs) / (ft)`|
+| sqrt.s fd, fs      | `(fd) = sqrt(fs)`|
+| sqrt.d fd, fs      | `(fd) = sqrt(fs)`|
+| abs.s fd, fs      | `(fd) = abs(fs)`|
+| abs.d fd, fs      | `(fd) = abs(fs)`|
+| neg.s fd, fs      | `(fd) = -(fs)`|
+| neg.d fd, fs      | `(fd) = -(fs)`|
+
+### FP Load/Store Instructions ###
+| **Instruction** | **Meaning** |
+|:---------|:--------------------|
+| lwc1 $f2, 40($t0)      | `(f2) = Mem[($t0+40)]`|
+| ldc1 $f2, 40($t0)      | `(f2) = Mem[($t0+40)]`|
+| swc1 $f2, 40($t0)      | `Mem[($t0+40)] = (f2)`|
+| sdc1 $f2, 40($t0)      | `Mem[($t0+40)] = (f2)`|
+
+| **FP Load/Store pseudo instructions** |
+|:---------|:--------------------|
+| l.s      | `lwc1 (load FP single)`|
+| s.s      | `swc1 (store FP single)`|
+| l.d      | `ldc1 (load FP double)`|
+| s.d      | `sdc1 (store FP double)`|
 
 ### PLayLists ###
 1. <a>https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A</a>
